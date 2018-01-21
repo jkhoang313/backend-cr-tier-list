@@ -13,7 +13,6 @@
 6. Install the required gems: `bundle install`.
 7. Install mailcatcher (cannot be included in Gemfile because of conflicts with other gems): `gem install mailcatcher`.
   - Run `mailcatcher` to run the mailcatcher server (can be accessed in browser at `http://127.0.0.1:1080`).
-5. Remove any files with a `.remove` extension
 
 ## Create Database
 - Create a database with: `createdb {db_name}` (db_name is the name your database).
