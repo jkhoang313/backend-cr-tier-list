@@ -1,0 +1,2 @@
+class TierListTypesController < ApplicationController
+end

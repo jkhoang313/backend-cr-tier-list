@@ -7,5 +7,9 @@ Rails.application.routes.draw do
     put '/user', to: 'users#update'
 
     post '/reset_password', to: 'settings#create'
+
+    resources :cards
+    resources :tier_list_types
+    resources :tier_lists
   end
 end
