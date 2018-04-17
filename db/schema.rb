@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180417025035) do
+ActiveRecord::Schema.define(version: 20180417032540) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 20180417025035) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "tier_list_selected_types", force: :cascade do |t|
+    t.integer  "tier_list_id"
+    t.integer  "tier_list_type_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.index ["tier_list_id"], name: "index_tier_list_selected_types_on_tier_list_id", using: :btree
+    t.index ["tier_list_type_id"], name: "index_tier_list_selected_types_on_tier_list_type_id", using: :btree
+  end
+
   create_table "tier_list_types", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -33,14 +42,12 @@ ActiveRecord::Schema.define(version: 20180417025035) do
 
   create_table "tier_lists", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "tier_list_type_id"
     t.string   "title"
     t.text     "description"
-    t.integer  "upvotes",           default: 0
-    t.jsonb    "tiers",             default: []
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-    t.index ["tier_list_type_id"], name: "index_tier_lists_on_tier_list_type_id", using: :btree
+    t.integer  "upvotes",     default: 0
+    t.jsonb    "tiers",       default: []
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.index ["user_id"], name: "index_tier_lists_on_user_id", using: :btree
   end
 

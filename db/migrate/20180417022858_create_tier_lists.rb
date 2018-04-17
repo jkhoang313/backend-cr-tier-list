@@ -2,7 +2,6 @@ class CreateTierLists < ActiveRecord::Migration[5.0]
   def change
     create_table :tier_lists do |t|
       t.references :user
-      t.references :tier_list_type
       t.string :title
       t.text :description
       t.integer :upvotes, default: 0
