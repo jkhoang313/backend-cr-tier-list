@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Sessions Controller", :type => :request do
+RSpec.describe "TierLists Controller", :type => :request do
   include UserSpecHelper
   include TierListSpecHelper
 
