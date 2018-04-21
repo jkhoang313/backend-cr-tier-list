@@ -1,0 +1,583 @@
+[
+  {
+    "name": "Archers",
+    "card_type": 1,
+    "rarity": 1,
+    "elixir_cost": 3,
+    "arena": 0
+  },
+  {
+    "name": "Arrows",
+    "card_type": 3,
+    "rarity": 1,
+    "elixir_cost": 3,
+    "arena": 0
+  },
+  {
+    "name": "Baby Dragon",
+    "card_type": 1,
+    "rarity": 3,
+    "elixir_cost": 4,
+    "arena": 0
+  },
+  {
+    "name": "Balloon",
+    "card_type": 2,
+    "rarity": 3,
+    "elixir_cost": 5,
+    "arena": 2
+  },
+  {
+    "name": "Bandit",
+    "card_type": 1,
+    "rarity": 4,
+    "elixir_cost": 3,
+    "arena": 9
+  },
+  {
+    "name": "Barbarian Barrel",
+    "card_type": 3,
+    "rarity": 3,
+    "elixir_cost": 3,
+    "arena": 10
+  },
+  {
+    "name": "Barbarian Hut",
+    "card_type": 4,
+    "rarity": 2,
+    "elixir_cost": 7,
+    "arena": 3
+  },
+  {
+    "name": "Barbarians",
+    "card_type": 1,
+    "rarity": 1,
+    "elixir_cost": 5,
+    "arena": 3
+  },
+  {
+    "name": "Bats",
+    "card_type": 1,
+    "rarity": 1,
+    "elixir_cost": 2,
+    "arena": 8
+  },
+  {
+    "name": "Battle Ram",
+    "card_type": 2,
+    "rarity": 2,
+    "elixir_cost": 4,
+    "arena": 6
+  },
+  {
+    "name": "Bomber",
+    "card_type": 1,
+    "rarity": 1,
+    "elixir_cost": 3,
+    "arena": 0
+  },
+  {
+    "name": "Bomb Tower",
+    "card_type": 4,
+    "rarity": 2,
+    "elixir_cost": 5,
+    "arena": 2
+  },
+  {
+    "name": "Bowler",
+    "card_type": 1,
+    "rarity": 3,
+    "elixir_cost": 5,
+    "arena": 8
+  },
+  {
+    "name": "Cannon",
+    "card_type": 4,
+    "rarity": 1,
+    "elixir_cost": 3,
+    "arena": 3
+  },
+  {
+    "name": "Cannon Cart",
+    "card_type": 1,
+    "rarity": 3,
+    "elixir_cost": 5,
+    "arena": 10
+  },
+  {
+    "name": "Clone",
+    "card_type": 3,
+    "rarity": 3,
+    "elixir_cost": 3,
+    "arena": 8
+  },
+  {
+    "name": "Dark Prince",
+    "card_type": 1,
+    "rarity": 3,
+    "elixir_cost": 4,
+    "arena": 7
+  },
+  {
+    "name": "Dart Goblin",
+    "card_type": 1,
+    "rarity": 2,
+    "elixir_cost": 3,
+    "arena": 9
+  },
+  {
+    "name": "Electro Wizard",
+    "card_type": 1,
+    "rarity": 4,
+    "elixir_cost": 4,
+    "arena": 7
+  },
+  {
+    "name": "Elite Barbarians",
+    "card_type": 1,
+    "rarity": 1,
+    "elixir_cost": 6,
+    "arena": 7
+  },
+  {
+    "name": "Elixir Collector",
+    "card_type": 4,
+    "rarity": 2,
+    "elixir_cost": 6,
+    "arena": 6
+  },
+  {
+    "name": "Executioner",
+    "card_type": 1,
+    "rarity": 3,
+    "elixir_cost": 6,
+    "arena": 9
+  },
+  {
+    "name": "Fireball",
+    "card_type": 3,
+    "rarity": 2,
+    "elixir_cost": 4,
+    "arena": 0
+  },
+  {
+    "name": "Fire Spirits",
+    "card_type": 1,
+    "rarity": 1,
+    "elixir_cost": 2,
+    "arena": 5
+  },
+  {
+    "name": "Flying Machine",
+    "card_type": 1,
+    "rarity": 2,
+    "elixir_cost": 4,
+    "arena": 9
+  },
+  {
+    "name": "Freeze",
+    "card_type": 3,
+    "rarity": 3,
+    "elixir_cost": 4,
+    "arena": 4
+  },
+  {
+    "name": "Furnace",
+    "card_type": 4,
+    "rarity": 2,
+    "elixir_cost": 4,
+    "arena": 5
+  },
+  {
+    "name": "Giant",
+    "card_type": 2,
+    "rarity": 2,
+    "elixir_cost": 5,
+    "arena": 0
+  },
+  {
+    "name": "Giant Skeleton",
+    "card_type": 1,
+    "rarity": 3,
+    "elixir_cost": 6,
+    "arena": 2
+  },
+  {
+    "name": "Goblin Barrel",
+    "card_type": 3,
+    "rarity": 3,
+    "elixir_cost": 3,
+    "arena": 1
+  },
+  {
+    "name": "Goblin Gang",
+    "card_type": 1,
+    "rarity": 1,
+    "elixir_cost": 3,
+    "arena": 9
+  },
+  {
+    "name": "Goblin Hut",
+    "card_type": 4,
+    "rarity": 2,
+    "elixir_cost": 5,
+    "arena": 1
+  },
+  {
+    "name": "Goblins",
+    "card_type": 1,
+    "rarity": 1,
+    "elixir_cost": 2,
+    "arena": 1
+  },
+  {
+    "name": "Golem",
+    "card_type": 2,
+    "rarity": 3,
+    "elixir_cost": 8,
+    "arena": 6
+  },
+  {
+    "name": "Graveyard",
+    "card_type": 3,
+    "rarity": 4,
+    "elixir_cost": 5,
+    "arena": 5
+  },
+  {
+    "name": "Guards",
+    "card_type": 1,
+    "rarity": 3,
+    "elixir_cost": 3,
+    "arena": 7
+  },
+  {
+    "name": "Heal",
+    "card_type": 3,
+    "rarity": 2,
+    "elixir_cost": 3,
+    "arena": 10
+  },
+  {
+    "name": "Hog Rider",
+    "card_type": 2,
+    "rarity": 2,
+    "elixir_cost": 4,
+    "arena": 4
+  },
+  {
+    "name": "Hunter",
+    "card_type": 1,
+    "rarity": 3,
+    "elixir_cost": 4,
+    "arena": 9
+  },
+  {
+    "name": "Ice Golem",
+    "card_type": 2,
+    "rarity": 2,
+    "elixir_cost": 2,
+    "arena": 8
+  },
+  {
+    "name": "Ice Spirit",
+    "card_type": 1,
+    "rarity": 1,
+    "elixir_cost": 1,
+    "arena": 8
+  },
+  {
+    "name": "Ice Wizard",
+    "card_type": 1,
+    "rarity": 4,
+    "elixir_cost": 3,
+    "arena": 5
+  },
+  {
+    "name": "Inferno Dragon",
+    "card_type": 1,
+    "rarity": 4,
+    "elixir_cost": 4,
+    "arena": 4
+  },
+  {
+    "name": "Inferno Tower",
+    "card_type": 4,
+    "rarity": 2,
+    "elixir_cost": 5,
+    "arena": 4
+  },
+  {
+    "name": "Knight",
+    "card_type": 1,
+    "rarity": 1,
+    "elixir_cost": 3,
+    "arena": 0
+  },
+  {
+    "name": "Lava Hound",
+    "card_type": 2,
+    "rarity": 4,
+    "elixir_cost": 7,
+    "arena": 4
+  },
+  {
+    "name": "Lightning",
+    "card_type": 3,
+    "rarity": 3,
+    "elixir_cost": 6,
+    "arena": 1
+  },
+  {
+    "name": "Lumberjack",
+    "card_type": 1,
+    "rarity": 4,
+    "elixir_cost": 4,
+    "arena": 8
+  },
+  {
+    "name": "Magic Archer",
+    "card_type": 1,
+    "rarity": 4,
+    "elixir_cost": 4,
+    "arena": 11
+  },
+  {
+    "name": "Mega Knight",
+    "card_type": 1,
+    "rarity": 4,
+    "elixir_cost": 7,
+    "arena": 10
+  },
+  {
+    "name": "Mega Minion",
+    "card_type": 1,
+    "rarity": 2,
+    "elixir_cost": 3,
+    "arena": 7
+  },
+  {
+    "name": "Miner",
+    "card_type": 1,
+    "rarity": 4,
+    "elixir_cost": 3,
+    "arena": 6
+  },
+  {
+    "name": "Minion Horde",
+    "card_type": 1,
+    "rarity": 1,
+    "elixir_cost": 5,
+    "arena": 4
+  },
+  {
+    "name": "Minions",
+    "card_type": 1,
+    "rarity": 1,
+    "elixir_cost": 3,
+    "arena": 2
+  },
+  {
+    "name": "Mini P.E.K.K.A",
+    "card_type": 1,
+    "rarity": 2,
+    "elixir_cost": 4,
+    "arena": 0
+  },
+  {
+    "name": "Mirror",
+    "card_type": 3,
+    "rarity": 3,
+    "elixir_cost": null,
+    "arena": 5
+  },
+  {
+    "name": "Mortar",
+    "card_type": 4,
+    "rarity": 1,
+    "elixir_cost": 4,
+    "arena": 6
+  },
+  {
+    "name": "Musketeer",
+    "card_type": 1,
+    "rarity": 2,
+    "elixir_cost": 4,
+    "arena": 0
+  },
+  {
+    "name": "Night Witch",
+    "card_type": 1,
+    "rarity": 4,
+    "elixir_cost": 4,
+    "arena": 8
+  },
+  {
+    "name": "P.E.K.K.A",
+    "card_type": 1,
+    "rarity": 3,
+    "elixir_cost": 7,
+    "arena": 4
+  },
+  {
+    "name": "Poison",
+    "card_type": 3,
+    "rarity": 3,
+    "elixir_cost": 4,
+    "arena": 5
+  },
+  {
+    "name": "Prince",
+    "card_type": 1,
+    "rarity": 3,
+    "elixir_cost": 5,
+    "arena": 0
+  },
+  {
+    "name": "Princess",
+    "card_type": 1,
+    "rarity": 4,
+    "elixir_cost": 3,
+    "arena": 7
+  },
+  {
+    "name": "Rage",
+    "card_type": 3,
+    "rarity": 3,
+    "elixir_cost": 2,
+    "arena": 3
+  },
+  {
+    "name": "Rocket",
+    "card_type": 3,
+    "rarity": 2,
+    "elixir_cost": 6,
+    "arena": 3
+  },
+  {
+    "name": "Royal Ghost",
+    "card_type": 1,
+    "rarity": 4,
+    "elixir_cost": 3,
+    "arena": 7
+  },
+  {
+    "name": "Royal Giant",
+    "card_type": 2,
+    "rarity": 1,
+    "elixir_cost": 6,
+    "arena": 10
+  },
+  {
+    "name": "Skeleton Army",
+    "card_type": 1,
+    "rarity": 3,
+    "elixir_cost": 3,
+    "arena": 0
+  },
+  {
+    "name": "Skeleton Barrel",
+    "card_type": 2,
+    "rarity": 1,
+    "elixir_cost": 3,
+    "arena": 6
+  },
+  {
+    "name": "Skeletons",
+    "card_type": 1,
+    "rarity": 1,
+    "elixir_cost": 1,
+    "arena": 2
+  },
+  {
+    "name": "Sparky",
+    "card_type": 1,
+    "rarity": 4,
+    "elixir_cost": 6,
+    "arena": 6
+  },
+  {
+    "name": "Spear Goblins",
+    "card_type": 1,
+    "rarity": 1,
+    "elixir_cost": 2,
+    "arena": 1
+  },
+  {
+    "name": "Tesla",
+    "card_type": 4,
+    "rarity": 1,
+    "elixir_cost": 4,
+    "arena": 4
+  },
+  {
+    "name": "The Log",
+    "card_type": 3,
+    "rarity": 4,
+    "elixir_cost": 2,
+    "arena": 6
+  },
+  {
+    "name": "Three Musketeers",
+    "card_type": 1,
+    "rarity": 2,
+    "elixir_cost": 9,
+    "arena": 7
+  },
+  {
+    "name": "Tombstone",
+    "card_type": 4,
+    "rarity": 2,
+    "elixir_cost": 3,
+    "arena": 2
+  },
+  {
+    "name": "Tornado",
+    "card_type": 3,
+    "rarity": 3,
+    "elixir_cost": 3,
+    "arena": 6
+  },
+  {
+    "name": "Valkyrie",
+    "card_type": 1,
+    "rarity": 2,
+    "elixir_cost": 4,
+    "arena": 1
+  },
+  {
+    "name": "Witch",
+    "card_type": 1,
+    "rarity": 3,
+    "elixir_cost": 5,
+    "arena": 0
+  },
+  {
+    "name": "Wizard",
+    "card_type": 1,
+    "rarity": 2,
+    "elixir_cost": 5,
+    "arena": 5
+  },
+  {
+    "name": "X-Bow",
+    "card_type": 4,
+    "rarity": 3,
+    "elixir_cost": 6,
+    "arena": 3
+  },
+  {
+    "name": "Zap",
+    "card_type": 3,
+    "rarity": 1,
+    "elixir_cost": 2,
+    "arena": 5
+  },
+  {
+    "name": "Zappies",
+    "card_type": 1,
+    "rarity": 2,
+    "elixir_cost": 4,
+    "arena": 11
+  }
+]
