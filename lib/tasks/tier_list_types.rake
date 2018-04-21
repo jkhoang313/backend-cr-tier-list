@@ -6,7 +6,7 @@ namespace :tier_list_types do
     puts "Creating TierListTypes (#{tier_list_strings.join(', ')})."
 
     tier_list_strings.each do |name|
-      TierListType.where(name: name).first_or_create
+      TierListType.find_or_create_by(name: name)
     end
   end
 end
