@@ -5,8 +5,8 @@ RSpec.describe "Sessions Controller", :type => :request do
   include TierListSpecHelper
 
   let!(:user) { create_test_user }
-  let!(:type_one_lists) { create_type_one_lists(user, 5) }
-  let!(:type_two_lists) { create_type_two_lists(user, 3) }
+  let!(:type_one_lists) { create_tier_lists(1, user, 5) }
+  let!(:type_two_lists) { create_tier_lists(2, user, 3) }
 
   describe 'GET /api/tier_lists' do
     context 'when list_type is 1' do
@@ -29,6 +29,16 @@ RSpec.describe "Sessions Controller", :type => :request do
           has_matching_list_type = tier_list["tier_list_types"].any? {|list_type| list_type["id"] == 1}
           expect(has_matching_list_type).to eq(true)
         end
+      end
+
+      it 'should the tier lists in order of upvotes' do
+        get("/api/tier_lists", params: params)
+
+        body = JSON.parse(response.body)
+
+        sorted_tier_lists = body.sort_by {|tier_list| -tier_list["upvotes"]}
+
+        expect(body).to eq(sorted_tier_lists)
       end
     end
 
