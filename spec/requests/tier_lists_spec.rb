@@ -23,6 +23,7 @@ RSpec.describe "TierLists Controller", :type => :request do
         expect(body[0]).to have_key("description")
         expect(body[0]).to have_key("upvotes")
         expect(body[0]).to have_key("tiers")
+        expect(body[0]["tiers"].length).to eq(2)
         expect(body[0]).to have_key("tier_list_types")
 
         body.each do |tier_list|

@@ -8,17 +8,14 @@ module TierListSpecHelper
         title: "TierListType #{list_id} List #{num}",
         description: "This is a description for #{num}",
         upvotes: rand(20),
-        tiers: [
-          {
-            title: "test tier",
-            cards: []
-          },
-          {
-            title: "test tier 2",
-            cards: []
-          },
-        ]
       )
+      2.times do |num|
+        list.tiers.create(
+          name: "test tier #{num}",
+          cards: [],
+          position: num
+        )
+      end
       list.tier_list_selected_types.create(tier_list_type_id: list_type.id)
       list
     end
