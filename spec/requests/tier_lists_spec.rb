@@ -10,10 +10,10 @@ RSpec.describe "TierLists Controller", :type => :request do
 
   describe 'GET /api/tier_lists' do
     context 'when list_type_id is 1' do
-      let!(:params) { { list_type_id: 1 } }
+      let!(:list_type_id) { 1 }
 
       it 'should return all tournament tier lists' do
-        get("/api/tier_lists", params: params)
+        get("/api/tier_lists/#{list_type_id}")
 
         body = JSON.parse(response.body)
 
@@ -33,7 +33,7 @@ RSpec.describe "TierLists Controller", :type => :request do
       end
 
       it 'should the tier lists in order of upvotes' do
-        get("/api/tier_lists", params: params)
+        get("/api/tier_lists/#{list_type_id}")
 
         body = JSON.parse(response.body)
 
@@ -44,10 +44,10 @@ RSpec.describe "TierLists Controller", :type => :request do
     end
 
     context 'when list_type_id is 2' do
-      let!(:params) { { list_type_id: 2 } }
+      let!(:list_type_id) { 2 }
 
       it 'should return all tournament tier lists' do
-        get("/api/tier_lists", params: params)
+        get("/api/tier_lists/#{list_type_id}")
 
         body = JSON.parse(response.body)
 

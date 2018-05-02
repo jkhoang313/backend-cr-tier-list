@@ -8,9 +8,10 @@ Rails.application.routes.draw do
 
     post '/reset_password', to: 'settings#create'
 
-    resources :tier_lists, only: [:index]
     resources :tier_list_types, only: [:index]
 
-    resources :cards
+    get '/tier_lists/:list_type_id', to: 'tier_lists#index'
+
+    resources :cards, only: [:index]
   end
 end
