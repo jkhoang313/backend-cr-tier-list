@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe "TierLists Controller", :type => :request do
-  include UserSpecHelper
   include TierListSpecHelper
+  include UserSpecHelper
 
   let!(:user) { create_test_user }
-  let!(:type_one_lists) { create_tier_lists(1, user, 5) }
-  let!(:type_two_lists) { create_tier_lists(2, user, 3) }
+  let!(:type_one_lists) { create_tier_lists(user, list_id: 1, quantity: 5) }
+  let!(:type_two_lists) { create_tier_lists(user, list_id: 2, quantity: 3) }
 
   describe 'GET /api/tier_lists' do
     context 'when list_type is 1' do

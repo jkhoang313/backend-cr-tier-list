@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Settings Controller", :type => :request do
   include UserSpecHelper
+  
   let!(:url) { '/api/reset_password' }
 
   it "can randomize a user's password if the user exists" do
