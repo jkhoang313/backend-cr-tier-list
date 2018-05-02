@@ -7,7 +7,7 @@ RSpec.describe Tier, type: :model do
   describe 'when being created' do
     it 'must have a unique tier_list and position combination' do
       user = create_test_user
-      tier_list = create_tier_lists(user)
+      tier_list = create_tier_lists(user, num_tiers: 0, quantity: 1).first
 
       expect(Tier.count).to eq(0)
 

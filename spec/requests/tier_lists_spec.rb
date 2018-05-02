@@ -9,8 +9,8 @@ RSpec.describe "TierLists Controller", :type => :request do
   let!(:type_two_lists) { create_tier_lists(user, list_id: 2, quantity: 3) }
 
   describe 'GET /api/tier_lists' do
-    context 'when list_type is 1' do
-      let!(:params) { { list_type: 1 } }
+    context 'when list_type_id is 1' do
+      let!(:params) { { list_type_id: 1 } }
 
       it 'should return all tournament tier lists' do
         get("/api/tier_lists", params: params)
@@ -43,8 +43,8 @@ RSpec.describe "TierLists Controller", :type => :request do
       end
     end
 
-    context 'when list_type is 2' do
-      let!(:params) { { list_type: 2 } }
+    context 'when list_type_id is 2' do
+      let!(:params) { { list_type_id: 2 } }
 
       it 'should return all tournament tier lists' do
         get("/api/tier_lists", params: params)
