@@ -1,4 +1,4 @@
-def create_users
+def create_seed_users
   clyde = User.find_or_create_by(username: "Clyde", email_address: "clyde@crapp.com")
   clyde.update(password: "123456", password_confirmation: "123456")
   bonnie = User.find_or_create_by(username: "Bonnie", email_address: "bonnie@crapp.com")
@@ -13,7 +13,7 @@ def create_users
   random.update(password: "123456", password_confirmation: "123456")
 end
 
-def create_tier_lists
+def create_seed_tier_lists
   users = User.all
   cards = Card.all
   cards_per_tier = cards.length / 6
@@ -44,46 +44,61 @@ def create_tier_lists
         user_id: random_user.id,
         title: "#{random_user.username}'s Tournament Tier List #{num * random_user.id}",
         description: "Some random description by #{random_user.username} number #{num}",
-        upvotes: rand(100),
-        tiers: [
-          {
-            name: "S-tier",
-            description: "The best cards in the game",
-            notes: "Random notes!",
-            cards: tier_one_cards
-          },
-          {
-            name: "A-tier",
-            description: "These are almost the best",
-            notes: "Random notes",
-            cards: tier_two_cards
-          },
-          {
-            name: "B-tier",
-            description: "The third best cards in the game",
-            notes: "Random notes",
-            cards: tier_three_cards
-          },
-          {
-            name: "C-tier",
-            description: "The fourth best cards in the game",
-            notes: "Random notes",
-            cards: tier_four_cards
-          },
-          {
-            name: "D-tier",
-            description: "Some of the worst cards",
-            notes: "Random notes",
-            cards: tier_five_cards
-          },
-          {
-            name: "F-tier",
-            description: "The worst cards in the game",
-            notes: "Random notes",
-            cards: tier_six_cards
-          }
-        ]
+        upvotes: rand(100)
       )
+      tiers = [
+        {
+          tier_list_id: tier_list.id,
+          name: "S-tier",
+          description: "The best cards in the game",
+          notes: "Random notes!",
+          position: 1,
+          cards: tier_one_cards
+        },
+        {
+          tier_list_id: tier_list.id,
+          name: "A-tier",
+          description: "These are almost the best",
+          notes: "Random notes",
+          position: 2,
+          cards: tier_two_cards
+        },
+        {
+          tier_list_id: tier_list.id,
+          name: "B-tier",
+          description: "The third best cards in the game",
+          notes: "Random notes",
+          position: 3,
+          cards: tier_three_cards
+        },
+        {
+          tier_list_id: tier_list.id,
+          name: "C-tier",
+          description: "The fourth best cards in the game",
+          notes: "Random notes",
+          position: 4,
+          cards: tier_four_cards
+        },
+        {
+          tier_list_id: tier_list.id,
+          name: "D-tier",
+          description: "Some of the worst cards",
+          notes: "Random notes",
+          position: 5,
+          cards: tier_five_cards
+        },
+        {
+          tier_list_id: tier_list.id,
+          name: "F-tier",
+          description: "The worst cards in the game",
+          notes: "Random notes",
+          position: 6,
+          cards: tier_six_cards
+        }
+      ]
+      tiers.each do |tier|
+        Tier.find_or_create_by(**tier)
+      end
       tier_list.tier_list_selected_types.create(tier_list_type: list_type)
     end
   end
@@ -105,6 +120,6 @@ def add_list_types_to_tier_lists
   end
 end
 
-create_users
-create_tier_lists
+create_seed_users
 add_list_types_to_tier_lists
+create_seed_tier_lists
