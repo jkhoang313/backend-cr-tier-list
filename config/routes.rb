@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
     resources :tier_list_types, only: [:index]
 
-    get '/tier_lists/:list_type_id', to: 'tier_lists#index'
+    resources :tier_lists, only: [:index]
 
     resources :cards, only: [:index]
   end

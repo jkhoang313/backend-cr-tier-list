@@ -5,7 +5,9 @@ RSpec.describe "TierLists Controller", :type => :request do
   include UserSpecHelper
 
   let!(:user) { create_test_user }
-  let!(:type_one_lists) { create_tier_lists(user, list_id: 1, quantity: 5) }
+  let!(:type_one_lists) do
+    create_tier_lists(user, list_id: 1, quantity: 10) + create_tier_lists(user, list_id: 1, quantity: 1, upvotes: 0)
+  end
   let!(:type_two_lists) { create_tier_lists(user, list_id: 2, quantity: 3) }
 
   describe 'GET /api/tier_lists' do
@@ -13,7 +15,7 @@ RSpec.describe "TierLists Controller", :type => :request do
       let!(:list_type_id) { 1 }
 
       it 'should return all tournament tier lists' do
-        get("/api/tier_lists/#{list_type_id}")
+        get("/api/tier_lists?list_type_id=#{list_type_id}")
 
         body = JSON.parse(response.body)
 
@@ -33,7 +35,7 @@ RSpec.describe "TierLists Controller", :type => :request do
       end
 
       it 'should the tier lists in order of upvotes' do
-        get("/api/tier_lists/#{list_type_id}")
+        get("/api/tier_lists?list_type_id=#{list_type_id}")
 
         body = JSON.parse(response.body)
 
@@ -41,13 +43,33 @@ RSpec.describe "TierLists Controller", :type => :request do
 
         expect(body).to eq(sorted_tier_lists)
       end
+
+      it 'should can respect the "limit" params' do
+        limit = 3
+
+        get("/api/tier_lists?list_type_id=#{list_type_id}&limit=#{limit}")
+
+        body = JSON.parse(response.body)
+
+        expect(body.length).to eq(limit)
+      end
+
+      it 'should can respect the "offset" params' do
+        offset = 2
+
+        get("/api/tier_lists?list_type_id=#{list_type_id}&offset=#{offset}")
+
+        body = JSON.parse(response.body)
+
+        expect(body.length).to eq(type_one_lists.length - offset)
+      end
     end
 
     context 'when list_type_id is 2' do
       let!(:list_type_id) { 2 }
 
       it 'should return all tournament tier lists' do
-        get("/api/tier_lists/#{list_type_id}")
+        get("/api/tier_lists?list_type_id=#{list_type_id}")
 
         body = JSON.parse(response.body)
 

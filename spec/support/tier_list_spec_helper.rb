@@ -1,5 +1,5 @@
 module TierListSpecHelper
-  def create_tier_lists(user, list_id: 1, quantity: 1, num_tiers: 2)
+  def create_tier_lists(user, list_id: 1, quantity: 1, num_tiers: 2, upvotes: nil)
     list_type = TierListType.find_or_create_by(id: list_id)
 
     Array(1..quantity).map do |num|
@@ -7,7 +7,7 @@ module TierListSpecHelper
         user_id: user.id,
         title: "TierListType #{list_id} List #{num}",
         description: "This is a description for #{num}",
-        upvotes: rand(20),
+        upvotes: upvotes || num,
       )
       num_tiers.times do |num|
         list.tiers.create(
