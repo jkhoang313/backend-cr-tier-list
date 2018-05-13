@@ -1,5 +1,6 @@
 require 'json'
 
+# Run by running: `rake cards:create`
 namespace :cards do
   desc "Create cards"
   task create: :environment do

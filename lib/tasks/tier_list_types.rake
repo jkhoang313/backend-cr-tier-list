@@ -1,3 +1,4 @@
+# Run by running: `rake tier_list_types:create`
 namespace :tier_list_types do
   desc "Create the Tier List Types"
   task create: :environment do
