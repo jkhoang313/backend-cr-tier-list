@@ -44,10 +44,13 @@ ActiveRecord::Schema.define(version: 20180502004503) do
     t.integer  "user_id"
     t.string   "title"
     t.text     "description"
-    t.integer  "upvotes",     default: 0
-    t.jsonb    "tiers",       default: []
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.integer  "upvotes",              default: 0
+    t.jsonb    "tiers",                default: []
+    t.integer  "primary_list_type_id"
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.index ["primary_list_type_id"], name: "index_tier_lists_on_primary_list_type_id", using: :btree
+    t.index ["upvotes"], name: "index_tier_lists_on_upvotes", using: :btree
     t.index ["user_id"], name: "index_tier_lists_on_user_id", using: :btree
   end
 
@@ -72,6 +75,7 @@ ActiveRecord::Schema.define(version: 20180502004503) do
     t.datetime "updated_at",                      null: false
     t.boolean  "is_pro",          default: false
     t.string   "username"
+    t.index ["email_address"], name: "index_users_on_email_address", using: :btree
   end
 
 end

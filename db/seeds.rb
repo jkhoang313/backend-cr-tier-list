@@ -121,5 +121,5 @@ def add_list_types_to_tier_lists
 end
 
 create_seed_users
-add_list_types_to_tier_lists
 create_seed_tier_lists
+add_list_types_to_tier_lists
