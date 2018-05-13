@@ -107,7 +107,7 @@ end
 def add_list_types_to_tier_lists
   # add tags to half of the tier lists
   tier_lists = TierList.all.sample(TierList.count / 2)
-  max_list_types_added = TierListType.count - 1
+  max_list_types_added = 4
   tier_lists.each do |tier_list|
     num_list_types_to_add = rand(max_list_types_added)
     list_types_to_add = TierListType.where.not(id: tier_list.tier_list_selected_types.pluck(:id)).sample(num_list_types_to_add)
