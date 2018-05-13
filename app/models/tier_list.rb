@@ -6,5 +6,5 @@ class TierList < ApplicationRecord
 
   has_many :tiers
 
-  has_one :primary_list_type
+  belongs_to :primary_list_type, class_name: "TierListType", foreign_key: 'primary_list_type_id'
 end

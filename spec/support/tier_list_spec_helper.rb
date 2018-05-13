@@ -8,6 +8,7 @@ module TierListSpecHelper
         title: "TierListType #{list_id} List #{num}",
         description: "This is a description for #{num}",
         upvotes: upvotes || num,
+        primary_list_type_id: list_id 
       )
       num_tiers.times do |num|
         list.tiers.create(

@@ -44,7 +44,8 @@ def create_seed_tier_lists
         user_id: random_user.id,
         title: "#{random_user.username}'s Tournament Tier List #{num * random_user.id}",
         description: "Some random description by #{random_user.username} number #{num}",
-        upvotes: rand(100)
+        upvotes: rand(100),
+        primary_list_type: list_type
       )
       tiers = [
         {
