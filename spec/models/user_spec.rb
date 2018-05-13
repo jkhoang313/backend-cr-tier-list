@@ -24,8 +24,23 @@ RSpec.describe User, type: :model do
   end
 
   it 'can not create a user if the email already exists' do
-    user_with_existing_email = User.create(email_address: user.email_address)
+    user_with_existing_email = User.create(
+      email_address: user.email_address,
+      password: "password",
+      password_confirmation: "password"
+    )
 
     expect(user_with_existing_email.save).to eq(false)
+  end
+
+  it 'can not create a user if the username already exists' do
+    user_with_existing_username = User.create(
+      email_address: "new@email.com",
+      password: "password",
+      password_confirmation: "password",
+      username: "testuser"
+    )
+
+    expect(user_with_existing_username.save).to eq(false)
   end
 end
