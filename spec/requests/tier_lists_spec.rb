@@ -1,9 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe "TierLists Controller", :type => :request do
-  include TierListSpecHelper
-  include UserSpecHelper
-
   let!(:user) { create_test_user }
   let!(:type_one_lists) do
     create_tier_lists(user, list_id: 1, quantity: 10) + create_tier_lists(user, list_id: 1, quantity: 1, upvotes: 0)

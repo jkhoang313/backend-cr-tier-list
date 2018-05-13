@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  include UserSpecHelper
-
   let!(:user) { create_test_user }
 
   it 'can save a password' do

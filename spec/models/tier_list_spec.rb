@@ -1,9 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe TierList, type: :model do
-  include TierListSpecHelper
-  include UserSpecHelper
-
   describe 'when adding tiers' do
     it 'should return the tiers in order of position' do
       user = create_test_user

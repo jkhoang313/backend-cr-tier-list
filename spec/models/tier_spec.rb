@@ -1,9 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Tier, type: :model do
-  include TierListSpecHelper
-  include UserSpecHelper
-
   describe 'when being created' do
     it 'must have a unique tier_list and position combination' do
       user = create_test_user

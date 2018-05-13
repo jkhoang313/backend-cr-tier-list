@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe "Sessions Controller", :type => :request do
-  include UserSpecHelper
-
   let!(:user) { create_test_user }
 
   describe 'GET /get_user' do

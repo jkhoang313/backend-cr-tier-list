@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe "Users Controller", :type => :request do
-  include UserSpecHelper
-
   let!(:url) { '/api/user' }
 
   describe 'POST /user' do
