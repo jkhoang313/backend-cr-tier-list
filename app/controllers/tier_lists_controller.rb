@@ -5,11 +5,15 @@ class TierListsController < ApplicationController
     limit = params["limit"]
 
     if list_type_id
-      tier_lists = TierList.joins(:tier_list_types).where(tier_list_types: { id: list_type_id }).order(upvotes: :DESC).offset(offset).limit(limit)
+      all_tier_lists = TierList.joins(:tier_list_types).where(tier_list_types: { id: list_type_id }).order(upvotes: :DESC)
     else
-      tier_lists = TierList.order(upvotes: :DESC).offset(offset).limit(limit)
+      all_tier_lists = TierList.order(upvotes: :DESC)
     end
+    selected_tier_lists = all_tier_lists.offset(offset).limit(limit)
 
-    render json: tier_lists, root: false
+    render json: {
+      tier_lists: selected_tier_lists.map { |tier_list| TierListSerializer.new(tier_list) },
+      total_tier_lists: all_tier_lists.count
+    }, root: false
   end
 end
